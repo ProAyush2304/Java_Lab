@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class StringStatistics {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Accept input
+        System.out.print("Enter a string: ");
+        String text = sc.nextLine();
+
+        int uppercase = 0, lowercase = 0, digits = 0, spaces = 0;
+
+        // Loop through each character
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+
+            if (Character.isUpperCase(ch)) {
+                uppercase++;
+            } else if (Character.isLowerCase(ch)) {
+                lowercase++;
+            } else if (Character.isDigit(ch)) {
+                digits++;
+            } else if (Character.isWhitespace(ch)) {
+                spaces++;
+            }
+        }
+
+        // Display results
+        System.out.println("Uppercase characters: " + uppercase);
+        System.out.println("Lowercase characters: " + lowercase);
+        System.out.println("Digits: " + digits);
+        System.out.println("Spaces: " + spaces);
+
+        sc.close();
+    }
+}
