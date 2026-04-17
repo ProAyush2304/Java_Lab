@@ -1,0 +1,35 @@
+public class Main {
+    Car c1 = new Car("Hyundai",112342,1125000.00);
+    Car c2 = new Car("Maruti",121156,1950000.00);
+    Car c3 = new Car("Mercedez",198123,109330000.00)
+}
+
+abstract class MotorVehicle {
+    String modelName;
+    int modelNumber;
+    int modelPrice;
+
+    MotorVehicle(String modelName, int modelNumber, double modelPrice){
+        this.modelName=modelName;
+        this.modelNumber=modelNumber;
+        this.modelPrice=modelPrice
+    }
+
+
+    abstract void display();
+}
+
+class Car extends MotorVehicle{
+    float discountRate;
+
+    void display(){
+        System.out.println("Car name: " + modelName);
+        System.out.println("Model number: " + modelNumber);
+        System.out.println("Car price: " + modelPrice);
+        System.out.println("Discount rate: " + discountRate);
+    }
+
+    void discount(){
+        discount = modelPrice - ((discountRate/100))*modelPrice;
+    }
+}
