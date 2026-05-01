@@ -1,0 +1,22 @@
+class Swap {
+    int num;
+    Swap(int n){
+        num = n;
+    }
+    void swap(Swap obj){
+        int temp = this.num;
+        this.num = obj.num;
+        obj.num = temp;
+    }
+    public static void main(String[] args) {
+        Swap obj1 = new Swap(10);
+        Swap obj2 = new Swap(20);
+        System.out.println("Before:");
+        System.out.println("A = " + obj1.num);
+        System.out.println("B = " + obj2.num);
+        obj1.swap(obj2);
+        System.out.println("After:");
+        System.out.println("A = " + obj1.num);
+        System.out.println("B = " + obj2.num);
+    }
+}
