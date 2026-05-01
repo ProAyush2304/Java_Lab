@@ -1,0 +1,14 @@
+class Temperature{
+    double celsius;
+    void covert(){
+        double fahrenheit=(celsius*9/5)+32;
+        System.out.println("Temperature in fahrenheit is:" +fahrenheit);
+    
+    public static void main(String[] args)
+{
+    Temperature obj=new Temperature();
+    obj.celsius=37;
+    obj.convert();
+}
+}
+}
